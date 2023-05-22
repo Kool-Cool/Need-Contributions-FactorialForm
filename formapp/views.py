@@ -11,7 +11,7 @@ def home_page_view(request):
     
     form = FactForm()
     
-    print(request)
+    # print(request)
     context = {'form':form}
     return render(request , "home.html" , context)
 
