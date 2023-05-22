@@ -27,7 +27,8 @@ def factorial(number):
         return number*factorial(number-1)
     
     
-def factorial_view(request, number):
+def factorial_view(request):
+    number = request.GET["Number"] # Hooolllyyyy
     result = factorial(int(number))
     return HttpResponse(f"The factorial of {number} is {result}")
 
